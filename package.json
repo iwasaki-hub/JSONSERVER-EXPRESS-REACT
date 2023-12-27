@@ -1,0 +1,25 @@
+{
+  "name": "fullstack-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "database": "json-server --watch database/db.json",
+    "client": "npm start --prefix frontend",
+    "server": "nodemon backend/app.js",
+    "dev": "concurrently --names \"JSON-SERVER,EXPRESS,REACT\" -c \"bgGreen.bold,bgMagenta.bold,bgBlue.bold\" \"npm run database\" \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "json-server": "^0.17.4"
+  }
+}
